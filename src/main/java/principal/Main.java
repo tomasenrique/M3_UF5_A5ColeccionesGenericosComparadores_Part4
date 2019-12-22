@@ -3,12 +3,14 @@ package principal;
 import clases.Moneda;
 import clases.Monedas;
 import excepciones.ElementoDuplicadoException;
+import generica.Contenedor;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
+import static metodos_constantes.Metodos.parseFecha;
 
 public class Main {
     public static void main(String[] args) {
@@ -115,14 +117,4 @@ public class Main {
 
     }
 
-
-    /**La funcion se encarga de pasar un dato de tipo texto a LocalDate
-     * @param dato sera el la fecha en formato cadena de texto
-     * @return devuelve un datos de tipo LocalDate con la fecha   */
-    public static LocalDate parseFecha(String dato) {
-        // pasa de String a LocalDate  dd/mm/aaaa
-        LocalDate fecha;
-        fecha = LocalDate.parse(dato, DateTimeFormatter.ofPattern("dd/M/uuuu"));
-        return fecha;
-    }
 }

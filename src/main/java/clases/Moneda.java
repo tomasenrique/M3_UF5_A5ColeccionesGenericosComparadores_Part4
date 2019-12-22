@@ -133,31 +133,14 @@ public class Moneda implements Comparable<Moneda> {
      * @param moneda Sera el objeto moneda pasado como parametro
      * @return Devolvera un boleano, true si son iguales y false si no lo son
      */
-/*    public boolean esIgual(Moneda moneda) {
-        final int constante = 17;
-        int hash = 1;
-        hash = constante * hash + valor; // aqui se obtiene el hash del atributo 'valor'
-        hash = constante * hash + (tipo == null ? 0 : tipo.hashCode());
-        hash = constante * hash + (detalle == null ? 0 : detalle.hashCode());
-        hash = constante * hash + (imagen == null ? 0 : imagen.hashCode());
-        hash = constante * hash + (fecha == null ? 0 : fecha.hashCode());
-        // hash sera el hashCode de la clase que se compara con el objeto pasado como parametro que en este caso es 'moneda'
-        return hash == moneda.hashCode();
-    } */
-
     public boolean esIgual(Moneda moneda) {
-        final int constante = 17;
-        int hash = 1;
         boolean resultado = false;
-
-        hash = constante * hash + valor; // aqui se obtiene el hash del atributo 'valor'
-        hash = constante * hash + (tipo == null ? 0 : tipo.hashCode());
-        hash = constante * hash + (detalle == null ? 0 : detalle.hashCode());
-        hash = constante * hash + (imagen == null ? 0 : imagen.hashCode());
-        hash = constante * hash + (fecha == null ? 0 : fecha.hashCode());
-
-        if (hash == moneda.hashCode()) {
-            if (imagen.equals(moneda.imagen)) {
+        /**Aqui se llama al metodo 'hashCode()' para obtener el numero hash de esta clase para compararla con el hash de
+         * del parametro pasado que es el objeto 'Moneda'      */
+        if (hashCode()  == moneda.hashCode()) {
+            /**Aqui una vez comparados los hash se verifica con 'this' que sera esta clase, se compara con el metodo 'equals'
+             * si es igual que el dato pasado 'Moneda'           */
+            if (this.equals(moneda)) {
                 resultado = true;
             }
         }

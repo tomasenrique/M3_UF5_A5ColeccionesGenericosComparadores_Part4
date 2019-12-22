@@ -2,6 +2,139 @@
 
 
 
+package generica;
+
+import clases.AlfabeticComparator;
+import clases.Moneda;
+import excepciones.ElementoDuplicadoException;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+
+public class Contenedor implements Iterable<Moneda> {
+
+
+    private ArrayList<Moneda> monedas;
+
+    // Contructor
+    public Contenedor() {
+        // inicializa el array
+        this.monedas = new ArrayList<>();
+    }
+
+    //Setter y Getter
+    public ArrayList<Moneda> getMonedas() {
+        return monedas;
+    }
+
+    public void setMonedas(ArrayList<Moneda> monedas) {
+        this.monedas = monedas;
+    }
+
+
+    // Metodos
+    public void guardarMonedaContains(Moneda moneda) throws ElementoDuplicadoException {
+        boolean contiene = false; // para saber si esta el objeto igual
+        for (Moneda m : monedas) { // se itera todo el array para verificar el contenido
+            if (m.getDetalle().contains(moneda.getDetalle()))
+                contiene = true; // verifica que la moneda no existe en el arrayList
+        }
+        if (contiene) {
+            throw new ElementoDuplicadoException("La moneda de valor " + moneda.getValor() + " ya existe, No se agregara a la lista.");
+        } else monedas.add(moneda); // agrega las monedas que no sean iguales
+    }
+
+
+    public void guardarMonedaEquals(Moneda moneda) throws ElementoDuplicadoException {
+        boolean contiene = false; // para saber si esta el objeto igual
+
+        for (Moneda monedaArray : monedas) { // se itera todo el array para verificar el contenido
+            if (monedaArray.equals(moneda)) contiene = true; // verifica que la moneda no existe en el arrayList
+        }
+        if (contiene) {
+            throw new ElementoDuplicadoException("La moneda de valor " + moneda.getValor() + " ya existe, No se agregara a la lista.");
+        } else monedas.add(moneda); // agrega las monedas que no sean iguales
+    }
+
+
+    public void guardarMonedaEsIgual(Moneda moneda) throws ElementoDuplicadoException {
+        boolean contiene = false; // para saber si esta el objeto igual
+
+        for (Moneda monedaArray : monedas) { // se itera todo el array para verificar el contenido
+            if (monedaArray.esIgual(moneda)) contiene = true; // verifica que la moneda no existe en el arrayList
+        }
+        if (contiene) {
+            throw new ElementoDuplicadoException("La moneda de valor " + moneda.getValor() + " ya existe, No se agregara a la lista.");
+        } else monedas.add(moneda); // agrega las monedas que no sean iguales
+
+    }
+
+
+    public void mostrarDatos() {
+        // mostrara el contenido del arrayList usando un FOREACH
+        for (Moneda moneda : monedas) {
+            System.out.println(moneda);
+        }
+    }
+
+
+    public void ordenarPorValor() {
+        // metodo estatico basico
+        Collections.sort(monedas);
+    }
+
+
+    public void ordenarPorAlfabeto() {
+        // ordenara por letra en el orden especificado en la clase 'Moneda'
+        Collections.sort(monedas, new AlfabeticComparator());
+    }
+
+
+    public void ordenarPorFecha() {
+        Collections.sort(monedas, new Comparator<Moneda>() {
+            @Override
+            public int compare(Moneda moneda1, Moneda moneda2) {
+                return moneda1.getFecha().compareTo(moneda2.getFecha()); // compara para ordenar por letras
+            }
+        });
+    }
+
+
+    @Override
+    public Iterator<Moneda> iterator() {
+        return monedas.iterator();
+    }
+
+
+    public Iterator<Moneda> iterarPorValor(int minVal) {
+        return new Iterator<Moneda>() { //clase anonima
+            int indice = 0; // servira para poder recorrer el arrayList
+
+            @Override
+            public boolean hasNext() {
+                boolean resultado = false;
+                while (indice < monedas.size() && !resultado) {
+                    if (monedas.get(indice).getValor() >= minVal) resultado = true;
+                    else indice++;
+                }
+                return resultado;
+            }
+
+            @Override
+            public Moneda next() {
+                return monedas.get(indice++);
+            }
+        };
+    }
+
+
+    public int indexOf(Moneda moneda) {
+        return monedas.indexOf(moneda);
+    }
+
+}
 
 
 
