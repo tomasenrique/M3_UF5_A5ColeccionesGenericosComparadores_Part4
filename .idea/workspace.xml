@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="060a8fcb-d4ab-476a-865d-ab5d3525daa4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/generica/Contenedor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/metodos_constantes/Metodos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/principal/MainGenerico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/clases/Moneda.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/clases/Moneda.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/principal/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/principal/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clases/Moneda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clases/Moneda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/principal/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/principal/Notas A5" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/principal/Notas A5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/generica/Contenedor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/generica/Contenedor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/principal/MainGenerico.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/principal/MainGenerico.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/generica/Contenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/generica/Contenedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/principal/MainGenerico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/principal/MainGenerico.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Arquillian JUnit Test Class" />
       </list>
     </option>
   </component>
@@ -48,7 +44,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../A2_ColeccionesGenericosComparadores_Part1" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -56,6 +54,12 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="generica" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\D\Lenguajes\JavaIntelliJDea\M3_UF5\EJERCICIOS\A5_ColeccionesGenericosComparadores_Part4\src\main\java" />
     </key>
@@ -87,6 +91,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.MainGenerico" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainGenerico" />
@@ -118,7 +126,7 @@
       <updated>1576529401249</updated>
       <workItem from="1576529402870" duration="1237000" />
       <workItem from="1576604649662" duration="2849000" />
-      <workItem from="1577037496476" duration="5873000" />
+      <workItem from="1577037496476" duration="23006000" />
     </task>
     <servers />
   </component>
@@ -130,34 +138,55 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="75" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1576529577504" />
-    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1577042133633">
+    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577056252704">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577042133633" />
-    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1576530241386">
+    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577056252704" />
+    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1577111759842">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
+    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577111759842" />
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1577103206632">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577103206632" />
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1576530241386" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1577050829059">
+    <state width="1493" height="621" key="GridCell.Tab.0.bottom" timestamp="1577113034271">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577050829059" />
+    <state width="1493" height="621" key="GridCell.Tab.0.bottom/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577113034271" />
     <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1576610767688" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1577050829059">
+    <state width="1493" height="621" key="GridCell.Tab.0.center" timestamp="1577113034271">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577050829059" />
+    <state width="1493" height="621" key="GridCell.Tab.0.center/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577113034271" />
     <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1576610767688" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1577050829059">
+    <state width="1493" height="621" key="GridCell.Tab.0.left" timestamp="1577113034271">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577050829059" />
+    <state width="1493" height="621" key="GridCell.Tab.0.left/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577113034271" />
     <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1576610767688" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1577050829059">
+    <state width="1493" height="621" key="GridCell.Tab.0.right" timestamp="1577113034271">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577050829059" />
+    <state width="1493" height="621" key="GridCell.Tab.0.right/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577113034271" />
     <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1576610767688" />
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1577053358112">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577053358112" />
+    <state width="1493" height="265" key="GridCell.Tab.1.center" timestamp="1577053358111">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.center/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577053358111" />
+    <state width="1493" height="265" key="GridCell.Tab.1.left" timestamp="1577053358111">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.left/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577053358111" />
+    <state width="1493" height="265" key="GridCell.Tab.1.right" timestamp="1577053358111">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.right/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577053358111" />
     <state x="277" y="59" key="SettingsEditor" timestamp="1576529420703">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -166,5 +195,13 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577040272528" />
+    <state x="540" y="120" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1577107856695">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="540" y="120" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577107856695" />
+    <state x="425" y="189" key="run.anything.popup" timestamp="1577110895626">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="425" y="189" key="run.anything.popup/0.0.1536.834/-1366.0.1366.738@0.0.1536.834" timestamp="1577110895626" />
   </component>
 </project>
