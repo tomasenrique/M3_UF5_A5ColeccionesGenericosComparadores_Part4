@@ -1,13 +1,15 @@
 package principal;
 
 import clases.Moneda;
-import generica.Contenedor;
+import generica.ContenedorDemo;
+
+import java.util.ArrayList;
+import java.util.Iterator;
 
 import static metodos_constantes.Metodos.parseFecha;
 
-public class MainGenerico {
+public class MainGenericoDemo {
     public static void main(String[] args) {
-
         Moneda m1 = new Moneda(5, "Moneda", "5 centimos de España", "Catedral de Santiago de Compostela", parseFecha("01/01/2000"));
         Moneda m2 = new Moneda(10, "Moneda", "10 centimos de España", "Miguel de Cervantes", parseFecha("02/02/2010"));
         Moneda m3 = new Moneda(20, "Moneda", "20 centimos de Andorra", "Iglesia románica de Santa Coloma", parseFecha("03/03/2008"));
@@ -17,11 +19,20 @@ public class MainGenerico {
         Moneda m7 = new Moneda(2, "Moneda", "2 euros de Irlanda", "El arpa céltica", parseFecha("03/03/2009"));
 
 
-        Moneda[] monedas = {m1, m2, m3, m4, m5, m6, m7};
-        Contenedor<Moneda>contenedor = new Contenedor<>();
+        ArrayList<Moneda> monedasGenerica = new ArrayList<>(); // Se implementa la clase que contendra las monedas
+        monedasGenerica.add(m1);
+        monedasGenerica.add(m2);
+        monedasGenerica.add(m3);
+        monedasGenerica.add(m4);
+        monedasGenerica.add(m5);
+        monedasGenerica.add(m6);
+        monedasGenerica.add(m7);
 
+
+
+        System.out.println("========================================");
         System.out.println("CLASE GENERICA - METODDO HEREDADO - DATOS SIN ORDENAR");
-        contenedor.setGenerico(monedas);
+        ContenedorDemo< ArrayList<Moneda>> contenedor = new ContenedorDemo<>(monedasGenerica);
         contenedor.mostrarDatos();
 
         System.out.println("========================================");
@@ -32,17 +43,17 @@ public class MainGenerico {
 
         System.out.println("========================================");
         System.out.println("CLASE GENERICA - METODDO HEREDADO - ORDENANDO POR LETRA");
-//        contenedor.ordenarPorAlfabeto();
-//        contenedor.mostrarDatos();
-
-
+        contenedor.ordenarPorAlfabeto();
+        contenedor.mostrarDatos();
 
         System.out.println("========================================");
         System.out.println("CLASE GENERICA - METODDO HEREDADO - ORDENANDO POR FECHA");
+        contenedor.ordenarPorFecha();
+        contenedor.mostrarDatos();
 
-
-
-
+        System.out.println("========================================");
+        System.out.println("CLASE GENERICA - METODO PROPIO DE LA CLASE");
+        System.out.println(contenedor.getGenerico());
 
 
 

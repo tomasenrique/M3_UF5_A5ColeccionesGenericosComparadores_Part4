@@ -1,11 +1,14 @@
 package clases;
 
+import generica.InterfaceDataAlfabetic;
+
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.Objects;
 
 import static java.lang.String.format;
 
-public class Moneda implements Comparable<Moneda> {
+public class Moneda implements Comparable<Moneda>, InterfaceDataAlfabetic {
 
     // Para poder generar un id diferente a cada moneda nuevo se usara los 2 siguientes atributos
     private static int cantidad = 0;
@@ -14,10 +17,15 @@ public class Moneda implements Comparable<Moneda> {
     private int valor; // valor de la moneda
     private String tipo; // sera para saber si es moneda o billete
     private String detalle; // descripcion de la moneda
-    private String imagen; // sera la imagen que tiene la moneda
+    protected String imagen; // sera la imagen que tiene la moneda
     private LocalDate fecha; // fecha de creacion de la moneda
 
     // Constructor
+    public Moneda() {
+        cantidad++;
+        this.id = cantidad;
+    }
+
     public Moneda(int valor, String tipo, String detalle, String imagen, LocalDate fecha) {
         this.valor = valor;
         this.tipo = tipo;
@@ -28,6 +36,7 @@ public class Moneda implements Comparable<Moneda> {
         cantidad++;
         this.id = cantidad;
     }
+
 
     // Setter y Getter
     public int getValor() {
@@ -182,6 +191,27 @@ public class Moneda implements Comparable<Moneda> {
          * uno o todos todo depende de la especificacion y del onjeto a comparar. */
         return resultado;
     }
+
+
+    /**
+     * ESTOS METODOS SERAN PARA LA CLASE GENERICA -  FALTA TERMINAR
+     *
+     */
+    @Override
+    public int getGenericData(Moneda moneda) {
+        return (this.getFecha().compareTo(moneda.getFecha()));
+    }
+
+    @Override
+    public int getGenericAlfabetic(Moneda moneda) {
+        return (this.getImagen().compareTo(moneda.getImagen()));
+    }
+
+
+
+
+
+
 
 
 }

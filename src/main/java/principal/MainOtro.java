@@ -1,11 +1,12 @@
 package principal;
 
 import clases.Moneda;
-import generica.Contenedor;
+import excepciones.ElementoDuplicadoException;
+import generica.ContenedorOtro;
 
 import static metodos_constantes.Metodos.parseFecha;
 
-public class MainGenerico {
+public class MainOtro {
     public static void main(String[] args) {
 
         Moneda m1 = new Moneda(5, "Moneda", "5 centimos de España", "Catedral de Santiago de Compostela", parseFecha("01/01/2000"));
@@ -17,12 +18,23 @@ public class MainGenerico {
         Moneda m7 = new Moneda(2, "Moneda", "2 euros de Irlanda", "El arpa céltica", parseFecha("03/03/2009"));
 
 
-        Moneda[] monedas = {m1, m2, m3, m4, m5, m6, m7};
-        Contenedor<Moneda>contenedor = new Contenedor<>();
+        ContenedorOtro<Moneda> contenedor = new ContenedorOtro<>();
+        try {
+            contenedor.guardarDatoGenerico(m1);
+            contenedor.guardarDatoGenerico(m2);
+            contenedor.guardarDatoGenerico(m3);
+            contenedor.guardarDatoGenerico(m4);
+            contenedor.guardarDatoGenerico(m5);
+            contenedor.guardarDatoGenerico(m6);
+            contenedor.guardarDatoGenerico(m7);
+        } catch (ElementoDuplicadoException e) {
+            e.printStackTrace();
+        }
 
+        System.out.println("========================================");
         System.out.println("CLASE GENERICA - METODDO HEREDADO - DATOS SIN ORDENAR");
-        contenedor.setGenerico(monedas);
         contenedor.mostrarDatos();
+
 
         System.out.println("========================================");
         System.out.println("CLASE GENERICA - METODDO HEREDADO - ORDENANDO POR ORDEN NATURAL - VALOR");
@@ -30,15 +42,11 @@ public class MainGenerico {
         contenedor.mostrarDatos();
 
 
-        System.out.println("========================================");
-        System.out.println("CLASE GENERICA - METODDO HEREDADO - ORDENANDO POR LETRA");
-//        contenedor.ordenarPorAlfabeto();
-//        contenedor.mostrarDatos();
 
 
 
-        System.out.println("========================================");
-        System.out.println("CLASE GENERICA - METODDO HEREDADO - ORDENANDO POR FECHA");
+
+
 
 
 
